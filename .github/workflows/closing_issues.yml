@@ -9,7 +9,7 @@ on:
     types:
       - closed
 jobs:
-  closing_issues:
+  remove_labels:
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -17,5 +17,5 @@ jobs:
       - name: Closing issues
         uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
         with:
-          remove-labels:: "triage, open"
+          remove-labels: "triage, open"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
